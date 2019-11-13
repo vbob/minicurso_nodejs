@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <title>MINICURSO | Criando Sites Dinâmicos com Node.js</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">IFMT</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cadastrar">Cadastrar Aluno</a>
+          </li>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row" style="text-align: center;">
+        <div class="col-12">
+          <h3>Editar Aluno</h3>
+        </div>
+      </div>
+
+      <form class="mt-5" id="formAluno" onsubmit="return salvarAluno()">
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <label for="inputID">ID</label>
+            <input type="text" class="form-control" id="inputID" disabled>
+          </div>
+          <div class="form-group col-md-7">
+            <label for="inputNome">Nome</label>
+            <input type="text" class="form-control" id="inputNome" placeholder="Nome do Aluno">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputIdade">Idade</label>
+            <input type="number" class="form-control" id="inputIdade" placeholder="Idade do Aluno" min="1" max="120">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEndereco">Endereço</label>
+          <input type="text" class="form-control" id="inputEndereco" placeholder="Endereço do Aluno">
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">E-mail</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email do Aluno">
+        </div>
+
+        <div style="text-align: right;">
+          <button type="submit" class="btn btn-success">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+<footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="/static/editaAluno.js"></script>
+</footer>
+
+</html>
